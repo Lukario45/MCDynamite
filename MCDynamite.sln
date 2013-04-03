@@ -1,17 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibOpenCraft", "LibOpenCraft\LibOpenCraft.csproj", "{0139F2B4-722D-4300-BA83-F99C109CD7DB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCDynamite", "MCDynamite\MCDynamite.csproj", "{0139F2B4-722D-4300-BA83-F99C109CD7DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibOpenCraft.ChunkHandler", "LibOpenCraft.ChunkHandler\LibOpenCraft.ChunkHandler.csproj", "{D6B69574-FA05-4008-8C93-B86A399D1102}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCDynamite.ChunkHandler", "MCDynamite.ChunkHandler\MCDynamite.ChunkHandler.csproj", "{D6B69574-FA05-4008-8C93-B86A399D1102}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibOpenCraft.Chat", "LibOpenCraft.Chat\LibOpenCraft.Chat.csproj", "{FF9DD83D-435B-4422-A468-1E8F967AE7C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCDynamite.Chat", "MCDynamite.Chat\MCDynamite.Chat.csproj", "{FF9DD83D-435B-4422-A468-1E8F967AE7C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibOpenCraft.Bukkit.Plugin", "LibOpenCraft.Bukkit.Plugin\LibOpenCraft.Bukkit.Plugin.csproj", "{F4367AF7-6075-45BD-80DF-039700E8808A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCDynamite.Bukkit.Plugin", "MCDynamite.Bukkit.Plugin\MCDynamite.Bukkit.Plugin.csproj", "{F4367AF7-6075-45BD-80DF-039700E8808A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibOpenCraft.WorldPhysics", "LibOpenCraft.WorldPhysics\LibOpenCraft.WorldPhysics.csproj", "{20308A0C-D645-4CF1-ADBC-3B9BDD097D1B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCDynamite.WorldPhysics", "MCDynamite.WorldPhysics\MCDynamite.WorldPhysics.csproj", "{20308A0C-D645-4CF1-ADBC-3B9BDD097D1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibOpenCraft.Query", "LibOpenCraft.Query\LibOpenCraft.Query.csproj", "{648DC40E-B73D-48D4-926A-4A5E51EA655A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCDynamite.Query", "MCDynamite.Query\MCDynamite.Query.csproj", "{648DC40E-B73D-48D4-926A-4A5E51EA655A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
