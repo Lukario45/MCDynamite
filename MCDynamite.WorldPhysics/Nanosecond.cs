@@ -7,7 +7,7 @@ namespace MCDynamite.WorldPhysics
 {
     public class Nanosecond
     {
-        private int microsecond;
+        private int microsecond = 0;
         private int m_count;
         private DateTime time;
         public Nanosecond()

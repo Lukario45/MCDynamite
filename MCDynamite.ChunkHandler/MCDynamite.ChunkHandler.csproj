@@ -42,7 +42,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LibOpenCraft\LibOpenCraft.csproj">
+    <ProjectReference Include="..\MCDynamite\MCDynamite.csproj">
       <Project>{0139F2B4-722D-4300-BA83-F99C109CD7DB}</Project>
       <Name>LibOpenCraft</Name>
     </ProjectReference>

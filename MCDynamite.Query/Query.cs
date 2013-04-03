@@ -45,9 +45,8 @@ namespace MCDynamite.Query
 
 		public static void Listen(object sock)
 		{
-			Socket _s = sock;
 			while (true) {
-				UdpClient client = _s.Accept();
+				UdpClient client = sock.Accept();
 				new QueryHandler(client);
 			}
 		}
