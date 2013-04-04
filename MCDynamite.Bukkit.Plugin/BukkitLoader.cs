@@ -13,7 +13,9 @@ namespace MCDynamite.Bukkit.Plugin
     [ExportMetadata("Name", "Bukkit Plugin Loader")]
     public class BukkitLoader : CoreModule
     {
+#pragma warning disable 169, 414
         string name = "";
+#pragma warning restore 169, 414
         List<string> bukkitfiles;
         public BukkitLoader()
             : base()

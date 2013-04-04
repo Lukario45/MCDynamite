@@ -7,7 +7,9 @@ namespace MCDynamite.WorldPhysics
 {
     public class Nanosecond
     {
+#pragma warning disable 169, 414
         private int microsecond = 0;
+#pragma warning restore 169, 414
         private int m_count;
         private DateTime time;
         public Nanosecond()

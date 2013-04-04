@@ -98,7 +98,7 @@ namespace MCDynamite
             {
                 _MethodInfo = _Type.GetProperty("Count");
             }
-            catch (Exception ex)
+            catch
             {
                 return -1;
             }
@@ -117,10 +117,7 @@ namespace MCDynamite
             {
                 _MethodInfo = _Type.GetMethod("Add");
             }
-            catch (Exception ex)
-            {
-                return;
-            }
+            catch { return; }
             _MethodInfo.Invoke(ModuleHandler.ModuleAddons, new object[2] { (p.ToString() + "_" + count_i), (object)m });
             count_i++;
         }
@@ -135,10 +132,7 @@ namespace MCDynamite
             {
                 _MethodInfo = _Type.GetMethod("Remove");
             }
-            catch (Exception ex)
-            {
-                return;
-            }
+            catch { return; }
             _MethodInfo.Invoke(ModuleHandler.ModuleAddons, new object[1] { p });
             count_i--;
         }
@@ -178,10 +172,7 @@ namespace MCDynamite
             {
                 _MethodInfo = _Type.GetMethod("ContainsKey");
             }
-            catch (Exception ex)
-            {
-                return true;
-            }
+            catch { return true; }
             return (bool)_MethodInfo.Invoke(ModuleHandler.Eventmodules, new object[1] { ptype });
         }
         public static void InvokeAddEventModule(PacketType ptype, ModuleCallback m)
@@ -195,10 +186,7 @@ namespace MCDynamite
             {
                 _MethodInfo = _Type.GetMethod("Add");
             }
-            catch (Exception ex)
-            {
-                return;
-            }
+            catch { return; }
             _MethodInfo.Invoke(ModuleHandler.Eventmodules, new object[2] { ptype, (object)m });
         }
         public static void InvokeRemoveEventModule(PacketType ptype)
@@ -212,10 +200,7 @@ namespace MCDynamite
             {
                 _MethodInfo = _Type.GetMethod("Remove");
             }
-            catch (Exception ex)
-            {
-                return;
-            }
+            catch { return; }
             _MethodInfo.Invoke(ModuleHandler.Eventmodules, new object[1] { ptype });
         }
 
@@ -438,10 +423,7 @@ namespace MCDynamite
             {
                 _MethodInfo = _Type.GetMethod("Start");
             }
-            catch (Exception ex)
-            {
-                return;
-            }
+            catch { return; }
             _MethodInfo.Invoke(cm, null);
         }
 
@@ -456,10 +438,7 @@ namespace MCDynamite
             {
                 _MethodInfo = _Type.GetMethod("Stop");
             }
-            catch (Exception ex)
-            {
-                return;
-            }
+            catch { return; }
             _MethodInfo.Invoke(cm, null);
         }
         #endregion

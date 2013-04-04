@@ -24,11 +24,8 @@ namespace MCDynamite
             Y = y;
             Z = z;
         }
-        public override bool Equals(object obj)
-        {
-            
-            return base.Equals(obj);
-        }
+        public override bool Equals(object obj) { return base.Equals(obj); }
+        public override int GetHashCode() { return base.GetHashCode(); }
         #region bool operators
         #region int
         public static bool operator ==(Vector3D v1, int v)

@@ -124,7 +124,7 @@ namespace MCDynamite
                     GridServer.player_list[cm.id].WaitToRead = Waitread;
                 }
             }
-            catch (Exception e)
+            catch
             {
                 //Console.WriteLine("ERROR: " + e.Message + "\nSource:" + e.Source + "\nMethod:" + e.TargetSite + "\nData:" + e.Data + "\nStack trace:" + e.StackTrace);
                 if (GridServer.player_list[id] != null)

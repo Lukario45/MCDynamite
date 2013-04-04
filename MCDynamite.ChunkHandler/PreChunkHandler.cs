@@ -256,7 +256,7 @@ namespace MCDynamite.ChunkHandler
                         }
                         for (int i_h = 0; i_h < 16; i_h++)
                         {
-                            if(IsAir[i_h])
+                            if (IsAir[i_h])
                                 _cPacket.PrimaryBitMap |= mask;
                             mask <<= 1;
                         }
@@ -268,10 +268,7 @@ namespace MCDynamite.ChunkHandler
                     _cPacket.ChunkData = ms_zipped.ToArray();
                 }
             }
-            catch (Exception e)
-            {
-                throw;
-            }
+            catch (Exception e) { throw e; }
             _cPacket.Compressed_Size = _cPacket.ChunkData.Length;
             _cPacket.BuildPacket();
             return _cPacket;

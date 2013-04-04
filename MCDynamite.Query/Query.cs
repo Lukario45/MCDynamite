@@ -1,3 +1,6 @@
+// LibOpenCraft devs were trying to create a structured query language, kind of like their own MySQL type database thing is what I"m guessing this probably is.
+// We don't have to continue/finish this, we can use other solutions too.
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,7 +49,7 @@ namespace MCDynamite.Query
 		public static void Listen(object sock)
 		{
 			while (true) {
-				UdpClient client = sock.Accept();
+                UdpClient client = null;//sock.Receive();
 				new QueryHandler(client);
 			}
 		}
