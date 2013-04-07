@@ -24,7 +24,7 @@ namespace MCDynamite
         public static Assembly[] this_functions = new Assembly[1];
         public static void Main(string[] args)
         {
-            
+            Console.Title = "MCDynamite Server";
             g = new GridServer();
             while(Console.Read() != '\n')
             {

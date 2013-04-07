@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MCDynamite.Plugins
+namespace MCDynamite.API.Plugins
 {
     public abstract class IPlugin
     {
