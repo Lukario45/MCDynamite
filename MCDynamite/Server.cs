@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using MCDynamite.Logging;
+using MCDynamite;
 
 namespace MCDynamite
 {
@@ -15,7 +17,11 @@ namespace MCDynamite
         public bool online = true;
         public bool isRunning = false;
 
+        public List<Logger> loggers = new List<Logger>();
+
         public static Server server;
+
+        public World world;
 
         public static Server getServer()
         {
