@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual C# Express 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCDynamite", "MCDynamite.csproj", "{C5900426-A53A-46E1-9E26-C421893A0D79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCDynamiteAPI", "..\MCDynamiteAPI\MCDynamiteAPI.csproj", "{912C6449-850D-4091-9A63-444379015149}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCDynamiteCLI", "MCDynamiteCLI\MCDynamiteCLI.csproj", "{BC3DE3DB-260F-4204-953B-C6B68112FA06}"
 EndProject
 Global
@@ -27,16 +25,6 @@ Global
 		{C5900426-A53A-46E1-9E26-C421893A0D79}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{C5900426-A53A-46E1-9E26-C421893A0D79}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{C5900426-A53A-46E1-9E26-C421893A0D79}.Release|x86.ActiveCfg = Release|Any CPU
-		{912C6449-850D-4091-9A63-444379015149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{912C6449-850D-4091-9A63-444379015149}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{912C6449-850D-4091-9A63-444379015149}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{912C6449-850D-4091-9A63-444379015149}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{912C6449-850D-4091-9A63-444379015149}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{912C6449-850D-4091-9A63-444379015149}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{912C6449-850D-4091-9A63-444379015149}.Release|Any CPU.Build.0 = Release|Any CPU
-		{912C6449-850D-4091-9A63-444379015149}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{912C6449-850D-4091-9A63-444379015149}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{912C6449-850D-4091-9A63-444379015149}.Release|x86.ActiveCfg = Release|Any CPU
 		{BC3DE3DB-260F-4204-953B-C6B68112FA06}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{BC3DE3DB-260F-4204-953B-C6B68112FA06}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{BC3DE3DB-260F-4204-953B-C6B68112FA06}.Debug|Mixed Platforms.Build.0 = Debug|x86

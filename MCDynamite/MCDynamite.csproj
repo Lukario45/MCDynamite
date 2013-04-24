@@ -40,15 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AI\Entity.cs" />
+    <Compile Include="AI\Mobs\Chicken.cs" />
+    <Compile Include="AI\MobType.cs" />
+    <Compile Include="Blocks\Block.cs" />
+    <Compile Include="Client\Player.cs" />
+    <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Net\IPacket.cs" />
     <Compile Include="Net\Packets.cs" />
     <Compile Include="Server.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MCDynamiteAPI\MCDynamiteAPI.csproj">
-      <Project>{912C6449-850D-4091-9A63-444379015149}</Project>
-      <Name>MCDynamiteAPI</Name>
-    </ProjectReference>
+    <Compile Include="World\World.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
