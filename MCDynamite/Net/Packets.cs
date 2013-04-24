@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MCDynamite.Net
 {
-    public class Packets
+    public class PacketList
     {
         public const byte KeepAlive = 0x00;
         public const byte LoginRequest = 0x01;

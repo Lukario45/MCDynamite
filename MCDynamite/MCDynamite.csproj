@@ -48,6 +48,7 @@
     <Compile Include="Logging\Logger.cs" />
     <Compile Include="Net\IPacket.cs" />
     <Compile Include="Net\Packets.cs" />
+    <Compile Include="Net\Packets\KeepAlive.cs" />
     <Compile Include="Server.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="World\World.cs" />
