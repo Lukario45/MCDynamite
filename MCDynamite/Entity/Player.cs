@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using MCDynamite.Net;
+using System.Net;
 
 namespace MCDynamite
 {
@@ -15,6 +16,13 @@ namespace MCDynamite
         public static string ip;
         public static bool dead = false;
         public bool threadRunning = false;
+        public static bool verified = false;
+        public static Player p;
+
+        public Player()
+        {
+            p = this;
+        }
 
         public override void onDeath()
         {
@@ -27,7 +35,36 @@ namespace MCDynamite
         public static void onConnect()
         {
             Packet.Write(new Packets().LoginRequest, new PacketStream()); //i have no idea what i'm doing
+            HandleLogin();
             Packet.Write(new Packets().Handshake, new PacketStream());
+        }
+
+        public static void HandleLogin()
+        {
+            String rh = String.Empty;
+
+            if (Server.getServer().online)
+            {
+                try
+                {
+                    using (WebClient web = new WebClient())
+                    {
+                        string response = web.DownloadString("http://session.minecraft.net/game/checkserver.jsp?user=" + name + "&serverId=" + rh);
+                        verified = (response.Trim() == "YES");
+                    }
+                }
+                catch { }
+                if (!verified) { Kick("Failed to verify username!"); return; }
+            }
+            else
+            {
+                verified = true;
+            }
+        }
+
+        public static void Kick(string reason)
+        {
+
         }
 
         public override int health
