@@ -18,6 +18,7 @@ namespace MCDynamite
         public bool isRunning = false;
 
         public List<Logger> loggers = new List<Logger>();
+        public List<Player> players = new List<Player>();
 
         public static Server server;
 
@@ -40,7 +41,10 @@ namespace MCDynamite
 
         public void whileRunning()
         {
-            //handle connections, etc
+            foreach (Player p in getServer().players)
+            {
+                p.pThread.Start(); p.threadRunning = true;
+            }
         }
     }
 }
