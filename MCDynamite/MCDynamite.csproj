@@ -40,11 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AI\Entity.cs" />
-    <Compile Include="AI\Mobs\Chicken.cs" />
-    <Compile Include="AI\MobType.cs" />
+    <Compile Include="Entity\Entity.cs" />
+    <Compile Include="Entity\Mobs\Cow.cs" />
+    <Compile Include="Entity\MobType.cs" />
     <Compile Include="Blocks\Block.cs" />
-    <Compile Include="Client\Player.cs" />
+    <Compile Include="Entity\Player.cs" />
     <Compile Include="Logging\Logger.cs" />
     <Compile Include="Net\Packet.cs" />
     <Compile Include="Net\Packets.cs" />
