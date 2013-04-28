@@ -24,6 +24,11 @@ namespace MCDynamite
             p = this;
         }
 
+        public static Player getPlayer()
+        {
+            return p;
+        }
+
         public override void onDeath()
         {
         }
