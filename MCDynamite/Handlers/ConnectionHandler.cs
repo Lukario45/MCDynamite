@@ -22,11 +22,12 @@ namespace MCDynamite.Handlers
                     _listener = new TcpListener(IPAddress.Any, Server.getServer().port);
                     _listener.Start();
                     _listener.BeginAcceptTcpClient(AcceptCallback, _listener);
+                    Logging.Logger.Log("Successfully listening for connections!");
                     break;
                 }
                 catch (SocketException e)
                 {
-                    Logging.Logger.Log("Error Code: " + e.ErrorCode);
+                    Logging.Logger.Log("Could not listen on port " + Server.getServer().port + "!");
                     break;
                 }
                 catch (Exception e)
