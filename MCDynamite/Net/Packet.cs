@@ -10,9 +10,9 @@ namespace MCDynamite.Net
     {
         public static List<byte> packets = new List<byte>();
 
-        public static void Read(byte data, PacketStream ps)
+        public static void Read(byte[] data, PacketStream ps)
         {
-            //idk what to do here
+            ps.Read(data, 1, 1); //probably wrong
         }
 
         public static void Write(byte data, PacketStream ps)

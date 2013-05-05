@@ -45,6 +45,8 @@
     <Compile Include="Entity\MobType.cs" />
     <Compile Include="Blocks\Block.cs" />
     <Compile Include="Entity\Player.cs" />
+    <Compile Include="Handlers\ConnectionHandler.cs" />
+    <Compile Include="Handlers\PlayerHandler.cs" />
     <Compile Include="Logging\Logger.cs" />
     <Compile Include="Net\Packet.cs" />
     <Compile Include="Net\Packets.cs" />
