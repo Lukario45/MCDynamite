@@ -5,6 +5,7 @@ using System.Text;
 using MCDynamite.Logging;
 using MCDynamite;
 using MCDynamite.Handlers;
+using MCDynamite.Util;
 
 namespace MCDynamite
 {
@@ -19,7 +20,9 @@ namespace MCDynamite
         public bool isRunning = false;
 
         public List<Logger> loggers = new List<Logger>();
+        public OpList<Player> operators = new OpList<Player>();
 
+        public static Logger logger = new Logger();
         public static Server server = new Server();
 
         public World world;
@@ -27,6 +30,11 @@ namespace MCDynamite
         public static Server getServer()
         {
             return server;
+        }
+
+        public static Logger getLogger()
+        {
+            return logger;
         }
 
         public void startServer()

@@ -59,7 +59,7 @@ namespace MCDynamite
             socket = pclient.Client;
             stream = pclient.GetStream();
             ip = socket.RemoteEndPoint.ToString().Split(':')[0];
-            Logging.Logger.Log("[" + ip + "] " + name + " connected");
+            Server.getLogger().Log("[" + ip + "] " + name + " connected");
             HandleLogin();
             whileOnline();
         }
@@ -112,7 +112,7 @@ namespace MCDynamite
             catch
             {
                 Packet.Write(new Packets().Kick, new PacketStream());
-                Logging.Logger.Log(name + " disconnected.");
+                Server.getLogger().Log(name + " disconnected.");
             }
         }
     }

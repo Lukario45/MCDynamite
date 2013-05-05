@@ -22,17 +22,17 @@ namespace MCDynamite.Handlers
                     _listener = new TcpListener(IPAddress.Any, Server.getServer().port);
                     _listener.Start();
                     _listener.BeginAcceptTcpClient(AcceptCallback, _listener);
-                    Logging.Logger.Log("Successfully listening for connections!");
+                    Server.getLogger().Log("Successfully listening for connections!");
                     break;
                 }
                 catch (SocketException e)
                 {
-                    Logging.Logger.Log("Could not listen on port " + Server.getServer().port + "!");
+                    Server.getLogger().Log("Could not listen on port " + Server.getServer().port + "!");
                     break;
                 }
                 catch (Exception e)
                 {
-                    Logging.Logger.Log("An error occured!");
+                    Server.getLogger().Log("An error occured!");
                 }
             }
         }
@@ -47,7 +47,7 @@ namespace MCDynamite.Handlers
             }
             catch (Exception e)
             {
-                Logging.Logger.Log("A Connection error occured!");
+                Server.getLogger().Log("A Connection error occured!");
             }
 
             if (Server.getServer().isRunning)

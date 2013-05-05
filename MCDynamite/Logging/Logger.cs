@@ -9,33 +9,13 @@ namespace MCDynamite.Logging
     {
         public delegate void LogEventHandler();
         public static event LogEventHandler onLog;
-        public static event LogEventHandler onLoggerDelete;
 
-        public string name;
-
-        public Logger(string name)
+        public Logger()
         {
-            this.name = name;
             Server.getServer().loggers.Add(this);
         }
 
-        public void deleteLogger(string name)
-        {
-            foreach (Logger l in Server.getServer().loggers)
-            {
-                if (l.name == name)
-                {
-                    Server.getServer().loggers.Remove(l);
-
-                    if (onLoggerDelete != null)
-                    {
-                        onLoggerDelete();
-                    }
-                }
-            }
-        }
-
-        public static void Log(string log)
+        public void Log(string log)
         {
             if (onLog != null) 
             {
