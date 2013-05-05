@@ -46,6 +46,7 @@ namespace MCDynamite
 
         public override void onSpawn()
         {
+            Packet.Write(new Packets().Respawn, new PacketStream());
         }
 
         public static void onConnect()
