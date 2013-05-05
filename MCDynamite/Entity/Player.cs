@@ -35,6 +35,11 @@ namespace MCDynamite
             return p;
         }
 
+        public string getIP()
+        {
+            return ip;
+        }
+
         public override void onDeath()
         {
         }
