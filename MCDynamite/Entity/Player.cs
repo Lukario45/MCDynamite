@@ -42,6 +42,8 @@ namespace MCDynamite
 
         public override void onDeath()
         {
+            Packet.Write(new Packets().DestroyEntity, new PacketStream());
+            onSpawn();
         }
 
         public override void onSpawn()
