@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using MCDynamite.Logging;
 using MCDynamite;
+using MCDynamite.Handlers;
 
 namespace MCDynamite
 {
@@ -18,7 +19,6 @@ namespace MCDynamite
         public bool isRunning = false;
 
         public List<Logger> loggers = new List<Logger>();
-        public List<Player> players = new List<Player>();
 
         public static Server server;
 
@@ -41,7 +41,7 @@ namespace MCDynamite
 
         public void whileRunning()
         {
-            foreach (Player p in getServer().players)
+            foreach (Player p in PlayerHandler.players)
             {
                 p.pThread.Start(); p.threadRunning = true;
             }
