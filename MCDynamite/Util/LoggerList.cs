@@ -10,12 +10,16 @@ namespace MCDynamite.Util
         public void Add(Logger l)
         {
             base.Add(l);
-            
         }
 
         public void Remove(Logger l)
         {
             base.Remove(l);
+        }
+
+        public void changeMainLogger(Logger l)
+        {
+            Server.logger.Equals(l);
         }
     }
 }
