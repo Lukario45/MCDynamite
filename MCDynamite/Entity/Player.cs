@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using MCDynamite.Net;
 using System.Net;
+using System.Net.Sockets;
 
 namespace MCDynamite
 {
@@ -18,10 +19,15 @@ namespace MCDynamite
         public bool threadRunning = false;
         public static bool verified = false;
         public static Player p;
+        public static TcpClient pclient;
+        public static Socket socket;
+        public static NetworkStream stream;
 
-        public Player()
+        public Player(TcpClient client)
         {
             p = this;
+            pclient = client;
+            new Thread(onConnect).Start();
         }
 
         public static Player getPlayer()
@@ -42,6 +48,12 @@ namespace MCDynamite
             Packet.Write(new Packets().LoginRequest, new PacketStream()); //i have no idea what i'm doing
             HandleLogin();
             Packet.Write(new Packets().Handshake, new PacketStream());
+            socket = pclient.Client;
+            stream = pclient.GetStream();
+            ip = socket.RemoteEndPoint.ToString().Split(':')[0];
+            Logging.Logger.Log("[" + ip + "] " + name + " connected");
+            HandleLogin();
+            whileOnline();
         }
 
         public static void HandleLogin()
@@ -69,7 +81,8 @@ namespace MCDynamite
 
         public static void Kick(string reason)
         {
-
+            Packet packet = new Packet();
+            Packet.Write(new Packets().Kick, new PacketStream());
         }
 
         public override int health
