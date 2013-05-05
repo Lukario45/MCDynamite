@@ -20,7 +20,7 @@ namespace MCDynamite
 
         public List<Logger> loggers = new List<Logger>();
 
-        public static Server server;
+        public static Server server = new Server();
 
         public World world;
 
@@ -32,6 +32,7 @@ namespace MCDynamite
         public void startServer()
         {
             Console.Title = motd + " | MCDynamite v" + getServer().version;
+            ConnectionHandler ch = new ConnectionHandler();
         }
 
         public void stopServer()
