@@ -10,9 +10,16 @@ namespace MCDynamite.Logging
         public delegate void LogEventHandler();
         public static event LogEventHandler onLog;
 
+        public static string name;
+
         public Logger()
         {
             Server.getServer().loggers.Add(this);
+        }
+
+        public static string getName()
+        {
+            return name;
         }
 
         public void Log(string log)
