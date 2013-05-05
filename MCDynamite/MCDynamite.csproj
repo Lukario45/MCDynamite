@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\Plugin.cs" />
+    <Compile Include="API\PluginManager.cs" />
     <Compile Include="Entity\Entity.cs" />
     <Compile Include="Entity\Mobs\Cow.cs" />
     <Compile Include="Entity\MobType.cs" />
@@ -56,6 +58,7 @@
     <Compile Include="Util\LoggerList.cs" />
     <Compile Include="Util\OpList.cs" />
     <Compile Include="Util\PlayerList.cs" />
+    <Compile Include="Util\PluginList.cs" />
     <Compile Include="World\World.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

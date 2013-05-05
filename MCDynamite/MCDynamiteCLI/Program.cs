@@ -17,7 +17,8 @@ namespace MCDynamiteCLI
         {
             AppDomain.CurrentDomain.ProcessExit += new EventHandler(OnProcessExit);
 
-            Server.getServer().startServer();
+            Server server = new Server(); //throws a weird exception here..
+            server.startServer();
 
             while (true)
             {

@@ -6,11 +6,18 @@ using MCDynamite.Logging;
 using MCDynamite;
 using MCDynamite.Handlers;
 using MCDynamite.Util;
+using MCDynamite.API;
+using System.IO;
 
 namespace MCDynamite
 {
     public class Server
     {
+
+        public Server()
+        {
+        }
+
         public string motd = "[MCDynamite] Default";
         public string version = "1.0.0.0";
 
@@ -21,6 +28,7 @@ namespace MCDynamite
 
         public List<Logger> loggers = new List<Logger>();
         public OpList<Player> operators = new OpList<Player>();
+        public PluginList<Plugin> plugins = new PluginList<Plugin>();
 
         public static Logger logger = new Logger();
         public static Server server = new Server();
@@ -39,8 +47,24 @@ namespace MCDynamite
 
         public void startServer()
         {
-            Console.Title = motd + " | MCDynamite v" + getServer().version;
+            Console.Title = getServer().motd + " | MCDynamite v" + getServer().version;
+            getServer().createDirsFiles();
+            PluginManager.AutoLoadPlugins();
+            PluginManager.EnableAllPlugins();
             ConnectionHandler ch = new ConnectionHandler();
+        }
+
+        public void createDirsFiles()
+        {
+            if (!Directory.Exists("plugins"))
+            {
+                Directory.CreateDirectory("plugins");
+            }
+
+            if (!File.Exists("plugins.txt"))
+            {
+                File.Create("plugins.txt");
+            }
         }
 
         public void stopServer()
