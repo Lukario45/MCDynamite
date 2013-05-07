@@ -16,8 +16,12 @@ namespace MCDynamiteCLI
         static void Main(string[] args)
         {
             AppDomain.CurrentDomain.ProcessExit += new EventHandler(OnProcessExit);
+            Console.Title = getServer().motd + " | MCDynamite v" + getServer().version;
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
 
+            Server.getLogger().Log("Starting server..");
             Server.getServer().startServer();
+            Server.getLogger().Log("Done!");
 
             while (true)
             {

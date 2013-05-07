@@ -26,6 +26,8 @@ namespace MCDynamite
         public bool online = true;
         public bool isRunning = false;
 
+        public ConnectionHandler ch = new ConnectionHandler();
+
         public List<Logger> loggers = new List<Logger>();
         public OpList<Player> operators = new OpList<Player>();
         public PluginList<Plugin> plugins = new PluginList<Plugin>();
@@ -47,13 +49,12 @@ namespace MCDynamite
 
         public void startServer()
         {
-            Console.Title = getServer().motd + " | MCDynamite v" + getServer().version;
             getServer().createDirsFiles();
             ConnectionHandler ch = new ConnectionHandler();
             PluginManager.AutoLoadPlugins();
             PluginManager.EnableAllPlugins();
 #if DEBUG
-            Console.WriteLine("Worked");
+            getLogger().Log("Worked");
 #endif
         }
 
@@ -68,11 +69,6 @@ namespace MCDynamite
             {
                 File.Create("plugins.txt"); Server.getLogger().Log("Created Text: Plugins");
             } 
-
-            if (!Directory.Exists("text"))
-            {
-                Directory.CreateDirectory("text"); Server.getLogger().Log("Created Directory: Text");
-            } 
         }
 
         public void stopServer()
@@ -86,6 +82,8 @@ namespace MCDynamite
             {
                 p.pThread.Start(); p.threadRunning = true;
             }
+
+            ch.StartListening();
         }
     }
 }

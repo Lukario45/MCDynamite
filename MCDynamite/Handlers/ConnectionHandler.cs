@@ -10,31 +10,23 @@ namespace MCDynamite.Handlers
 
         public ConnectionHandler()
         {
-            StartListening();
+
         }
 
-        private static void StartListening()
+        public void StartListening()
         {
-            while (Server.getServer().isRunning)
-            {
                 try
                 {
                     _listener = new TcpListener(IPAddress.Any, Server.getServer().port);
                     _listener.Start();
                     _listener.BeginAcceptTcpClient(AcceptCallback, _listener);
-                    Server.getLogger().Log("Successfully listening for connections!");
-                    break;
                 }
                 catch (SocketException e)
                 {
-                    Server.getLogger().Log("Could not listen on port " + Server.getServer().port + "!");
-                    break;
                 }
                 catch (Exception e)
                 {
-                    Server.getLogger().Log("An error occured!");
                 }
-            }
         }
 
         private static void AcceptCallback(IAsyncResult ar)
