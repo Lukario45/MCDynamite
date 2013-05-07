@@ -11,7 +11,8 @@ namespace MCDynamite
 
         public abstract void onDeath();
         public abstract void onSpawn();
-        public abstract int health { get; }
+        public abstract int hearts { get; }
+        public abstract int attack { get; }
         public abstract MobType type { get; }
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MCDynamite
 {
-    public class Cow : Entity
+    public class Pig : Entity
     {
         public override void onDeath()
         {
@@ -27,7 +27,7 @@ namespace MCDynamite
 
         public override int attack
         {
-            get { return 0; } //can't hurt you
+            get { return 0; }
         }
     }
 }
