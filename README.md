@@ -7,6 +7,11 @@ MCDynamite is a free, open-source Minecraft Server implementation.
 
 Copyright (c) 2012-2013 MCDynamite Dev Team
 
+Who is MCDynamite?
+=========
+
+View the team [here](https://github.com/MCDynamite/MCDynamite/wiki/Team).
+
 Found an Error?
 ==========
 
