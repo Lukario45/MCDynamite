@@ -34,3 +34,4 @@ Credits
 * [MCDynamite Dev Team](https://github.com/MCDynamite?tab=members) - Working hard on MCDynamite.
 * [MCDawn](https://github.com/jonnyli1125) - Our use of the Plugin System.
 * [Notch](http://mojang.com/notch/) and the rest of [Mojang](http://mojang.com/) for creating [Minecraft](http://minecraft.net/) and more specifically, the original Minecraft server.
+* [Jaquadro](https://github.com/jaquadro) - Developing the Substrate library.
