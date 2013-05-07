@@ -93,7 +93,7 @@ namespace MCDynamite
             Packet.Write(new Packets().Kick, new PacketStream());
         }
 
-        public override int health
+        public override int hearts
         {
             get { return 100; }
         }
