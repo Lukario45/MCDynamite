@@ -10,14 +10,14 @@ namespace MCDynamite
 {
     public class World
     {
+        public static NbtWorld world;
+
         public static void GenerateFlat(string path, string name)
         {
             if (!Directory.Exists(path))
             {
                 Directory.CreateDirectory(path);
             }
-
-            NbtWorld world;
 
             world = AnvilWorld.Create(path);
 
@@ -47,8 +47,6 @@ namespace MCDynamite
                     chunk.Blocks.RebuildBlockLight();
                     chunk.Blocks.RebuildSkyLight();
 
-                    Console.WriteLine("Built Chunk {0},{1}", chunk.X, chunk.Z);
-
                     cm.Save();
                 }
             }
@@ -56,8 +54,9 @@ namespace MCDynamite
             world.Save();
         }
 
-        public void Decompress()
+        public static void Load(string path)
         {
+            NbtWorld srcWorld = NbtWorld.Open(path);
         }
 
         static void FlatChunk(ChunkRef chunk, int height)

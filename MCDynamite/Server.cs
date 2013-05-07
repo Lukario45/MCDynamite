@@ -8,6 +8,7 @@ using MCDynamite.Handlers;
 using MCDynamite.Util;
 using MCDynamite.API;
 using System.IO;
+using Substrate;
 
 namespace MCDynamite
 {
@@ -55,30 +56,24 @@ namespace MCDynamite
             PluginManager.AutoLoadPlugins();
             PluginManager.EnableAllPlugins();
             getLogger().Log("Done!");
-            getLogger().Log("Loading world..");
             loadWorld();
-            getLogger().Log("Done!");
-#if DEBUG
-            getLogger().Log("Worked");
-#endif
         }
 
         public void loadWorld()
         {
             if (!Directory.Exists("world"))
             {
+                getLogger().Log("Generating world..");
                 Directory.CreateDirectory("world");
                 World.GenerateFlat("world", "main");
+                getLogger().Log("Done!");
             }
-
-#if DEBUG
-            if (!Directory.Exists("world"))
+            else
             {
-                Directory.CreateDirectory("world");
-            } else { Directory.Delete("world"); Directory.CreateDirectory("world"); }
-
-            World.GenerateFlat("world", "main"); //new, fresh world each time
-#endif
+                getLogger().Log("Loading world..");
+                NbtWorld srcWorld = NbtWorld.Open("world");
+                getLogger().Log("Done!");
+            }
         }
 
         public void createDirsFiles()
