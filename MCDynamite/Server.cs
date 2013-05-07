@@ -49,27 +49,30 @@ namespace MCDynamite
         {
             Console.Title = getServer().motd + " | MCDynamite v" + getServer().version;
             getServer().createDirsFiles();
+            ConnectionHandler ch = new ConnectionHandler();
             PluginManager.AutoLoadPlugins();
             PluginManager.EnableAllPlugins();
-            ConnectionHandler ch = new ConnectionHandler();
+#if DEBUG
+            Console.WriteLine("Worked");
+#endif
         }
 
         public void createDirsFiles()
         {
             if (!Directory.Exists("plugins"))
             {
-                Directory.CreateDirectory("plugins");
-            }
+                Directory.CreateDirectory("plugins"); Server.getLogger().Log("Created Directory: Plugins");
+            } 
 
             if (!File.Exists("plugins.txt"))
             {
-                File.Create("plugins.txt");
-            }
+                File.Create("plugins.txt"); Server.getLogger().Log("Created Text: Plugins");
+            } 
+
             if (!Directory.Exists("text"))
             {
-                Directory.CreateDirectory("text");
-            }
-
+                Directory.CreateDirectory("text"); Server.getLogger().Log("Created Directory: Text");
+            } 
         }
 
         public void stopServer()
