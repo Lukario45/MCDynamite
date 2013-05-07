@@ -51,8 +51,13 @@ namespace MCDynamite
         {
             getServer().createDirsFiles();
             ConnectionHandler ch = new ConnectionHandler();
+            getLogger().Log("Loading plugins..");
             PluginManager.AutoLoadPlugins();
             PluginManager.EnableAllPlugins();
+            getLogger().Log("Done!");
+            getLogger().Log("Loading world..");
+            loadWorld();
+            getLogger().Log("Done!");
 #if DEBUG
             getLogger().Log("Worked");
 #endif

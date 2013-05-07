@@ -21,7 +21,7 @@ namespace MCDynamiteCLI
 
             Server.getLogger().Log("Starting server..");
             Server.getServer().startServer();
-            Server.getLogger().Log("Done!");
+            Server.getLogger().Log("Finished setting up server!");
 
             while (true)
             {

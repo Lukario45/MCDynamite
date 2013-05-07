@@ -95,7 +95,7 @@ namespace MCDynamite
 
         public override int hearts
         {
-            get { return 100; }
+            get { return 20; } //10 hearts
         }
 
         public override MobType type
@@ -114,6 +114,11 @@ namespace MCDynamite
                 Packet.Write(new Packets().Kick, new PacketStream());
                 Server.getLogger().Log(name + " disconnected.");
             }
+        }
+
+        public override int attack
+        {
+            get { return 4; } //2
         }
     }
 }
