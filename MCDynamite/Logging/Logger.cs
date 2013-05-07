@@ -12,11 +12,6 @@ namespace MCDynamite.Logging
 
         public static string name;
 
-        public Logger()
-        {
-            Server.getServer().loggers.Add(this);
-        }
-
         public static string getName()
         {
             return name;

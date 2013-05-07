@@ -65,6 +65,11 @@ namespace MCDynamite
             {
                 File.Create("plugins.txt");
             }
+            if (!Directory.Exists("text"))
+            {
+                Directory.CreateDirectory("text");
+            }
+
         }
 
         public void stopServer()
