@@ -58,6 +58,24 @@ namespace MCDynamite
 #endif
         }
 
+        public void loadWorld()
+        {
+            if (!Directory.Exists("world"))
+            {
+                Directory.CreateDirectory("world");
+                World.GenerateFlat("world", "main");
+            }
+
+#if DEBUG
+            if (!Directory.Exists("world"))
+            {
+                Directory.CreateDirectory("world");
+            } else { Directory.Delete("world"); Directory.CreateDirectory("world"); }
+
+            World.GenerateFlat("world", "main"); //new, fresh world each time
+#endif
+        }
+
         public void createDirsFiles()
         {
             if (!Directory.Exists("plugins"))

@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Substrate">
+      <HintPath>..\lib\Substrate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,7 +45,6 @@
   <ItemGroup>
     <Compile Include="API\Plugin.cs" />
     <Compile Include="API\PluginManager.cs" />
-    <Compile Include="Blocks\BlockData.cs" />
     <Compile Include="Entity\Entity.cs" />
     <Compile Include="Entity\Mobs\Cow.cs" />
     <Compile Include="Entity\Mobs\Pig.cs" />
