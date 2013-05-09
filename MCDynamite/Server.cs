@@ -27,6 +27,9 @@ namespace MCDynamite
         public bool online = true;
         public bool isRunning = false;
 
+        public delegate void ConsoleEvent();
+        public ConsoleEvent OnReadLine = null;
+
         public ConnectionHandler ch = new ConnectionHandler();
 
         public List<Logger> loggers = new List<Logger>();
@@ -46,14 +49,13 @@ namespace MCDynamite
         public static Logger getLogger()
         {
             return logger;
-        }
+        } 
 
         public void startServer()
         {
             getServer().createDirsFiles();
             ConnectionHandler ch = new ConnectionHandler();
             getLogger().Log("Loading plugins..");
-            PluginManager.AutoLoadPlugins();
             PluginManager.EnableAllPlugins();
             getLogger().Log("Done!");
             loadWorld();
@@ -81,11 +83,6 @@ namespace MCDynamite
             if (!Directory.Exists("plugins"))
             {
                 Directory.CreateDirectory("plugins"); Server.getLogger().Log("Created Directory: Plugins");
-            } 
-
-            if (!File.Exists("plugins.txt"))
-            {
-                File.Create("plugins.txt"); Server.getLogger().Log("Created Text: Plugins");
             } 
         }
 

@@ -56,15 +56,5 @@ namespace MCDynamite.API
                 p.onDisable();
             }
         }
-
-        public static void AutoLoadPlugins()
-        {
-            if (!File.Exists("text/plugins.txt"))
-                File.Create("text/plugins.txt").Close();
-            foreach (string p in File.ReadAllLines("text/plugins.txt"))
-            {
-                PluginManager.Load(p);
-            }
-        }
     }
 }
